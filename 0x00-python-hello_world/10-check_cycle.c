@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * check_cycle -
- * @lists:
+ * check_cycle - function that checks if a singly linked list.
+ * @list: linked list
  *
- * Return:
+ * Return: 1 or, 0 if it doesn't
  */
 int check_cycle(listint_t *list)
 {
