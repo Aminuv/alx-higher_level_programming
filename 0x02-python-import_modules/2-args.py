@@ -9,4 +9,6 @@ if __name__ == '__main__':
         print("{} arguments:".format(i))
     else:
         print("{} arguments:".format(i))
-
+        for j in argv[1:]:
+            print("{}: {}".format(i, j))
+            i += 1
