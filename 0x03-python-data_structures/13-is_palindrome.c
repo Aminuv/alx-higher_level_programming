@@ -29,7 +29,7 @@ int is_palindrome(listint_t **head)
 		slow = slow->next;
 	while (prv && slow)
 	{
-		if (prv->next != slow->next)
+		if (prv->n != slow->n)
 			return (0);
 
 		prv = prv->next;
