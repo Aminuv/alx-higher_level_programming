@@ -1,14 +1,15 @@
 #include "lists.h"
 /**
- * is_paindrome - the function that checks if a singly linked list is a palindrome
+ * is_palindrome - the function that checks a singly linked list
  * @head: the head of the linked list
- * return: 0 if is nt, else 1
+ *
+ * Return: 0 if is nt, else 1
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *tmp, *prv;
 
-	if (*head == NULL || (*head)->next == NULL )
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
 	fast = *head;
