@@ -2,6 +2,7 @@
 
 """Define node for a singly-linked list."""
 
+
 class Node:
     """classe node"""
 
@@ -30,3 +31,36 @@ class Node:
         if not isinstance(value, Node) and value is not Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
+
+class SinglyLinkedList:
+    """Represent for a singly-linked list."""
+
+    def __init__(self):
+        """Initalize the new SinglyLinkedL st."""
+        self.__head = None
+
+    def sorted_insert(self, value):
+        new = Node(value)
+        if self.__head is None:
+            new.next_node = None
+            self.__head = new
+        elif self.__head.data > value:
+            new.next_node = self.__head
+            self.__head = new
+        else:
+            tmp = self.__head
+            while (tmp.next_node is not None and
+                    tmp.next_node.data < value):
+                tmp = tmp.next_node
+            new.next_node = tmp.next_node
+            tmp.next_node = new
+
+    def __str__(self):
+        """Define the representation for  SinglyLinked ist."""
+        values = []
+        tmp = self.__head
+        while tmp is not None:
+            values.append(str(tmp.data))
+            tmp = tmp.next_node
+        return ('\n'.join(values))
