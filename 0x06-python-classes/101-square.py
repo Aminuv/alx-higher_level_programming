@@ -2,7 +2,6 @@
 """Define the class Square."""
 
 
-
 class Square:
     """Represent that square."""
 
@@ -12,12 +11,10 @@ class Square:
         self.size = size
         self.position = position
 
-
     @property
     def size(self):
         """set that current size in the square."""
         return (self.__size)
-
 
     @size.setter
     def size(self, value):
@@ -27,12 +24,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-
     @property
     def position(self):
         """Get/set the current position of the square."""
         return (self.__position)
-
 
     @position.setter
     def position(self, value):
@@ -43,11 +38,9 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-
     def area(self):
         """Return the current area of the square."""
         return (self.__size * self.__size)
-
 
     def my_print(self):
         """Print the square with the # character."""
