@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""Calculaion the module"""
+
+
+
 def matrix_divided(matrix, div):
     if not isinstance(matrix,list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
