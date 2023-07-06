@@ -1,5 +1,4 @@
 #include "Python.h"
-
 /**
  * print_python_string - For Printing an  information about Python str.
  * @p: A PyObject string.
