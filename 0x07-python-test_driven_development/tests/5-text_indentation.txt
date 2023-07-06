@@ -26,7 +26,7 @@ Now use it:
 	>>> text_indentation("Amine")
 	Amine
 
-	>>> text_indentation(":Terry")
+	>>> text_indentation(":Amine")
 	:
 	<BLANKLINE>
 	Amine
