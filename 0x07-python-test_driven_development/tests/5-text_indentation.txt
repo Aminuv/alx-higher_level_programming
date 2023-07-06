@@ -1,11 +1,14 @@
-The text_indentation
-====================
+The `text_indentation` module
+==============================
 
-Using text_indentation
-----------------------
+Using `text_indentation`
+-------------------------
+
 First import ``text_indentation`` from the ``text_indentation`` module:
 
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
 
 	>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi: litteram videor an totas paginas commovere")
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -20,13 +23,13 @@ First import ``text_indentation`` from the ``text_indentation`` module:
 	Lorem:
 	<BLANKLINE>
 
-	>>> text_indentation("Terry")
-	Terry
+	>>> text_indentation("Amine")
+	Amine
 
 	>>> text_indentation(":Terry")
 	:
 	<BLANKLINE>
-	Terry
+	Amine
 
 	>>> text_indentation(":")
 	:
@@ -55,3 +58,4 @@ First import ``text_indentation`` from the ``text_indentation`` module:
 	Traceback (most recent call last):
 	...
 	TypeError: text must be a string
+
