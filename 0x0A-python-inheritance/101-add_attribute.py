@@ -4,7 +4,9 @@
 
 
 def add_attribute(*args):
-    """dds a new attribute"""
+    """
+    adds a new attribute
+    """
 
     if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
