@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+ THE List that inherit from list
+"""
 
-"""First go at the  inheritance"""
 
 class MyList(list):
+    """THE Inherits from list"""
     def print_sorted(self):
-        """print the list"""
-        print sorted(list)
+        """FOR PrintING the list but sorted """
+        print(sorted(self))
