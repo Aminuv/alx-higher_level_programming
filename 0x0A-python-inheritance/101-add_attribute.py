@@ -4,11 +4,8 @@
 
 
 def add_attribute(*args):
-    """
-    dds a new attribute
-    """
+    """dds a new attribute"""
 
-    if "main" in str(type(args[0])):
-        setattr(args[0], args[1], args[2])
-    else:
+    if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
+    setattr(obj, name, value)
