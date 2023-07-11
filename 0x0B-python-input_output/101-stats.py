@@ -1,11 +1,11 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 
 
-"""Reads from standard input and computes metrics."""
+""" Reads from standard input and computes metrics. """
 
 
 def print_stats(size, status_codes):
-    """Print accumulated"""
+    """Print accumulated metrics"""
 
     print("File size: {}".format(size))
     for key in sorted(status_codes):
@@ -40,7 +40,10 @@ if __name__ == "__main__":
                     if status_codes.get(line[-2], -1) == -1:
                         status_codes[line[-2]] = 1
                     else:
-                        pass
+                        status_codes[line[-2]] += 1
+            except IndexError:
+                pass
+
         print_stats(size, status_codes)
 
     except KeyboardInterrupt:
