@@ -9,12 +9,12 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangles = [[1]]
-    while len(triangles) != n:
-        trin = triangles[-1]
+    triangle = [[1]]
+    while len(triangle) != n:
+        trin = triangle[-1]
         temp = [1]
         for i in range(len(trin) - 1):
-            temp.append(trin[1] + trin[i + 1])
+            temp.append(trin[i] + trin[i + 1])
         temp.append(1)
-        triangles.append(temp)
-    return triangles
+        triangle.append(temp)
+    return triangle
