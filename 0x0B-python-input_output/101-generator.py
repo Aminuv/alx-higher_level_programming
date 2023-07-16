@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
 import random
+=======
+mport random
+>>>>>>> c7266d1b0147d045adbdf326b343a273e70c7c9b
 import sys
 from time import sleep
 import datetime
