@@ -67,3 +67,7 @@ class Square(Rectangle):
             "y": self.y
         }
 
+    def __str__(self):
+        """Return a print() and str() representation of that Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
