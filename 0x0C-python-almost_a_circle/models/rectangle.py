@@ -87,9 +87,8 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-            Update A Rectangle.
+           Update A Rectangle.
         """
-
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -108,18 +107,19 @@ class Rectangle(Base):
                     self.y = arg
                 a += 1
 
-        elif kwarg and len(kwarg) != 0:
-            for ki, vi in kwarg.items():
-                if ki == "id":
-                    if vi is None:
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = vi
-                elif ki == "width":
-                    self.width = vi
-                elif ki == "height":
-                    self.height = vi
-                elif ki == "x":
-                    self.x = vi
-                elif ki == "y":
-                    self.y = vi
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
+
