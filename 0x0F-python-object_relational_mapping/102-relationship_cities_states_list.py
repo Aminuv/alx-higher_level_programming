@@ -4,10 +4,10 @@
 """
 
 from sys import argv
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from relationship_city import Base, City
 from relationship_state import State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
 
