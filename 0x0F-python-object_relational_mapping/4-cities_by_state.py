@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-   To Lists of all cities to the database 'hbtn_0e_4_usa', ordered by 'city id'.
+    To Lists of all cities to the database 'hbtn_0e_4_usa',
+    ordered by 'city id'.
 """
 
 import MySQLdb
