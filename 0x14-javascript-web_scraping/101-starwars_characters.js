@@ -1,9 +1,9 @@
 #!/usr/bin/node
-
+//  prints all characters of a Star Wars movie.
 const request = require('request');
 const util = require('util');
-const fmid = process.argv[2];
-const URL = `https://swapi-api.alx-tools.com/api/films/${fmid}`;
+const id = process.argv[2];
+const URL = `https://swapi-api.alx-tools.com/api/films/${id}`;
 const prequest = util.promisify(request);
 
 (async () => {
