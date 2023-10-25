@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//  prints all characters of a Star Wars movie
+//  prints all characters of a Star Wars movie.
 const request = require('request');
 const util = require('util');
 const id = process.argv[2];
