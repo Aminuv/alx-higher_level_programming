@@ -1,19 +1,37 @@
 #!/usr/bin/node
 // prints all characters of a Star Wars movie.
 const request = require('request');
-const util = require('util');
-const id = process.argv[2];
-const URL = `https://swapi-api.alx-tools.com/api/films/${id}`;
-const prequest = util.promisify(request);
+const movieId = process.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-(async () => {
-  try {
-    const film = (await prequest(URL, { json: true })).body;
-    for (const url of film.characters) {
-      const character = (await prequest(url, { json: true })).body;
-      console.log(character.name);
-    }
-  } catch (error) {
-    console.log(error);
+request(url, (error, response, body) => {
+  if (!error && response.statusCode === 200) {
+    const movieData = JSON.parse(body);
+    const characters = movieData.characters;
+
+    const characterRequests = characters.map((characterUrl) => {
+      return new Promise((resolve, reject) => {
+        request(characterUrl, (charError, charResponse, charBody) => {
+          if (!charError && charResponse.statusCode === 200) {
+            const characterData = JSON.parse(charBody);
+            resolve(characterData.name);
+          } else {
+            reject(charError);
+          }
+        });
+      });
+    });
+
+    Promise.all(characterRequests)
+      .then((characterNames) => {
+        characterNames.forEach((name) => {
+          console.log(name);
+        });
+      })
+      .catch((errors) => {
+        console.error(errors);
+      });
+  } else {
+    console.error(error);
   }
-})();
+});
