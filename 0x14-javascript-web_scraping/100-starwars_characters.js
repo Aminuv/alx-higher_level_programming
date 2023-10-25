@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// user.
+
 const request = require('request');
 
 const filmId = process.argv[2];
@@ -12,7 +12,7 @@ request(URL, (error, response, body) => {
       request(charURL, (error, response, body) => {
         if (!error) {
           console.log(JSON.parse(body).name);
-	}
+        }
       });
     }
   }
