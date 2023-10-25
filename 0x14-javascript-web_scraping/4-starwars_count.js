@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// An import the module
+// An import the module.
 const request = require('request');
 request(process.argv[2], function (error, response, body) {
   if (!error) {
