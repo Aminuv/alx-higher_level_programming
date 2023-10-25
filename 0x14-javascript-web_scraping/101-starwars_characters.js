@@ -3,7 +3,6 @@
 const request = require('request');
 const util = require('util');
 const id = process.argv[2];
-
 const prequest = util.promisify(request);
 
 (async () => {
